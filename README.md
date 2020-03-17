@@ -49,19 +49,19 @@ Creating the classname component
 // using arguments
 const Button = cc('button')(
   'font-sans',
-  ({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500
+  ({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500'
 );
 
 // using an array
 const Button = cc('button')([
   'font-sans',
-  ({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500
+  ({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500'
 ]);
 
 // using template strings
 const Button = cc('button')(`
   font-sans
-  ${({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500)}
+  ${({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500')}
 `;
 
 
