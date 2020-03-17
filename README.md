@@ -1,4 +1,4 @@
-# classname-components
+# classnames-components
 
 > A CSS class component wrapper to speed up styling React components
 
@@ -12,11 +12,11 @@ This project is README-driven, this file is step 1. There will be a lot of edits
 
 ## Basic usage
 
-`classname-components` is using [classnames](https://github.com/JedWatson/classnames), so you have a lot of flexibility.
+`classnames-components` is using [classnames](https://github.com/JedWatson/classnames), so you have a lot of flexibility.
 
 ```js
 
-import cc from 'classname-components';
+import cc from 'classnames-components';
 
 // using arguments
 const Header = cc('h1')('font-sans', 'text-3xl');
@@ -72,13 +72,13 @@ export default MyComponent;
 
 ```
 
-## Adding styling to existing classname-component
+## Adding styling to existing classnames-component
 
 ```jsx
 
 const Text = cc('p')('font-sans');
 
-// add styling to Text and create a new classname-component
+// create a new classnames-component starting from Text
 const Paragraph = cc(Text)('text-base leading-relaxed')
 
 ```
