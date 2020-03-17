@@ -1,4 +1,4 @@
-# classnames-components
+# classnames-components [![npm version](https://badge.fury.io/js/classnames-components.svg)](https://badge.fury.io/js/classnames-components)
 
 > A CSS class component wrapper to speed up styling React components
 
