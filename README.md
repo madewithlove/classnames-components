@@ -21,6 +21,8 @@ npm i classnames-components
 
 ## Basic usage
 
+You can play around with a CodeSandbox example [here](https://codesandbox.io/s/classnames-components-wr8nh).
+
 Because we're using [classnames](https://github.com/JedWatson/classnames), you have a lot of flexibility.
 
 ```js
