@@ -12,7 +12,7 @@ This project is README-driven, this file is step 1. There will be a lot of edits
 
 ## Basic usage
 
-*using Tailwind in this example*
+`classname-components` is using [classnames](https://github.com/JedWatson/classnames), so you have a lot of flexibility.
 
 ```js
 
@@ -27,14 +27,11 @@ const Intro = cc('p')(['font-serif', 'text-base', 'leading-relaxed']);
 // using a string
 const Wrapper = cc('section')('container mx-auto px-4');
 
-// using classnames -> https://github.com/JedWatson/classnames
-const Button = cc('button')(
-  classnames({
-    'color-gray-500': true,
-    'font-serif': true,
-  })
-);
-
+// using an object
+const Button = cc('button')({
+  'color-gray-500': true,
+  'font-serif': true,
+});
 
 const MyComponent = () => (
   <Wrapper>
@@ -48,19 +45,21 @@ export default MyComponent;
 
 ```
 
+more examples [here](https://github.com/JedWatson/classnames#usage)
+
 ## Based on props
 
-You can also use [classnames](https://github.com/JedWatson/classnames) to conditionally apply classes.
-
-The props of the component are passed down.
+Props are available by using a function as second param.
 
 ```jsx
 
-const Button = cc('button')(props => classnames({
-  'color-red-500': props.type === ButtonType.ERROR,
-  'color-gray-500': props.type === ButtonType.DEFAULT,
-  'font-serif': true,
-}));
+const Button = cc('button')(({ type }) => [
+  'font-serif',
+  {
+    'color-red-500': type === ButtonType.ERROR,
+    'color-gray-500': type === ButtonType.DEFAULT,
+  }
+]);
 
 const MyComponent = () => (
   <Wrapper>
