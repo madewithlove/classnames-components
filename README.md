@@ -25,7 +25,7 @@ const Header = cc('h1')('font-sans', 'text-3xl');
 const Intro = cc('p')(['font-serif', 'text-base', 'leading-relaxed']);
 
 // using a string
-const Wrapper = cc('container mx-auto px-4');
+const Wrapper = cc('section')('container mx-auto px-4');
 
 const MyComponent = () => (
   <Wrapper>
@@ -64,6 +64,7 @@ const Button = cc('button')(`
   ${({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500)}
 `;
 
+
 ```
 
 Using it
@@ -78,6 +79,17 @@ const MyComponent = () => (
 )
 
 export default MyComponent;
+
+```
+
+## Adding styling to existing classname-component
+
+```js
+
+const Text = cc('p')('font-sans');
+
+// add styling to Text and create a new classname-component
+const Paragraph = cc(Text)('text-base leading-relaxed')
 
 ```
 
