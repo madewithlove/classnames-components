@@ -9,7 +9,7 @@ const parseParams = (...params) => props =>
     .map(param => classnames(isFunction(param) ? param(props) : param))
     .join(' ');
 
-const classnamesComponents = Component => (...params) => props =>
+const classnamesComponents = element => (...params) => props =>
   React.createElement(element, {
     className: parseParams(...params)(props),
     ...props,
