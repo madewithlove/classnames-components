@@ -15,10 +15,10 @@ const parseParams = (...params) => props =>
 // How do we wrap an existing classname-component?
 // --- also make sure we can use `as` in this situation
 
-const classnamesComponents = element => (...params) => (
+const classnamesComponents = element => (...params) => ({
   className = '',
   ...props
-) =>
+}) =>
   React.createElement(element, {
     className: parseParams(className, ...params)(props),
     ...props,

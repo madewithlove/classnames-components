@@ -1,6 +1,6 @@
 {
   "name": "classnames-components",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A CSS class component wrapper to speed up styling React components",
   "main": "lib/index.js",
   "scripts": {
