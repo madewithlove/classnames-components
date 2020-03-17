@@ -5,11 +5,19 @@
 Heavily inspired by the great css-in-js library [styled-components](https://github.com/styled-components), all credits where credits due.
 This module is a component wrapper around [classnames](https://github.com/JedWatson/classnames).
 
-This project is README-driven, this file is step 1. There will be a lot of edits before I start coding things.
+This project is README-driven and WIP. The basic functionality works.
 
 ## Installation
 
-_not on npm yet_
+```bash
+yarn add classnames-components
+```
+
+or
+
+```bash
+npm i classnames-components
+```
 
 ## Basic usage
 
