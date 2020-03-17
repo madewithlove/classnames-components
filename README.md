@@ -2,9 +2,9 @@
 
 > A CSS class component wrapper to speed up styling React components
 
-Heavily inspired by the great css-in-js library styled-components, all credits where credits due.
+Heavily inspired by the great css-in-js library [styled-components](https://github.com/styled-components), all credits where credits due.
 
-This projects is README-driven, this file is step 1. There will be a lot of edits before I start coding things.
+This project is README-driven, this file is step 1. There will be a lot of edits before I start coding things.
 
 ## Installation
 
