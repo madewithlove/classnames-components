@@ -84,6 +84,22 @@ const Paragraph = cc(Text)('text-base leading-relaxed')
 
 ```
 
+## Changing semantics
+
+You can use `as` to overwrite the semantics of the element.
+
+```jsx
+
+const Text = cc('p')('font-sans');
+
+const MyComponent = props => (
+  <Text {...props} as={'div'}/>
+)
+
+export default MyComponent;
+
+```
+
 
 ## License
 
