@@ -44,7 +44,7 @@ You can access the props of the component and use them to apply classes conditio
 
 Creating the classname component
 
-```js
+```jsx
 
 // using arguments
 const Button = cc('button')(
@@ -69,7 +69,7 @@ const Button = cc('button')(`
 
 Using it
 
-```js
+```jsx
 
 const MyComponent = () => (
   <Wrapper>
@@ -84,7 +84,7 @@ export default MyComponent;
 
 ## Adding styling to existing classname-component
 
-```js
+```jsx
 
 const Text = cc('p')('font-sans');
 
