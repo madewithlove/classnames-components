@@ -3,6 +3,7 @@
 > A CSS class component wrapper to speed up styling React components
 
 Heavily inspired by the great css-in-js library [styled-components](https://github.com/styled-components), all credits where credits due.
+This module is a component wrapper around [classnames](https://github.com/JedWatson/classnames).
 
 This project is README-driven, this file is step 1. There will be a lot of edits before I start coding things.
 
@@ -12,7 +13,7 @@ This project is README-driven, this file is step 1. There will be a lot of edits
 
 ## Basic usage
 
-`classnames-components` is using [classnames](https://github.com/JedWatson/classnames), so you have a lot of flexibility.
+Because we're using [classnames](https://github.com/JedWatson/classnames), you have a lot of flexibility.
 
 ```js
 
