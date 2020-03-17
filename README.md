@@ -9,14 +9,13 @@ This project is README-driven, this file is step 1. There will be a lot of edits
 
 ## Installation
 
-*not on npm yet*
+_not on npm yet_
 
 ## Basic usage
 
 Because we're using [classnames](https://github.com/JedWatson/classnames), you have a lot of flexibility.
 
 ```js
-
 import cc from 'classnames-components';
 
 // using arguments
@@ -40,10 +39,9 @@ const MyComponent = () => (
     <Intro>A nice intro</Intro>
     <Button>Ok</Button>
   </Wrapper>
-)
+);
 
 export default MyComponent;
-
 ```
 
 more examples [here](https://github.com/JedWatson/classnames#usage)
@@ -53,13 +51,12 @@ more examples [here](https://github.com/JedWatson/classnames#usage)
 Props are available by using a function as second param.
 
 ```jsx
-
 const Button = cc('button')(props => [
   'font-serif',
   {
     'color-red-500': props.type === ButtonType.ERROR,
     'color-gray-500': props.type === ButtonType.DEFAULT,
-  }
+  },
 ]);
 
 const MyComponent = () => (
@@ -67,39 +64,31 @@ const MyComponent = () => (
     <Button type={ButtonType.ALERT}>An alert button</Button>
     <Button type={ButtonType.DEFAULT}>A default button</Button>
   </Wrapper>
-)
+);
 
 export default MyComponent;
-
 ```
 
-## Adding styling to existing classnames-component
+## Adding styling to existing classnames-component (not implemented yet)
 
 ```jsx
-
 const Text = cc('p')('font-sans');
 
 // create a new classnames-component starting from Text
-const Paragraph = cc(Text)('text-base leading-relaxed')
-
+const Paragraph = cc(Text)('text-base leading-relaxed');
 ```
 
-## Changing semantics
+## Changing semantics (not implemented yet)
 
 You can use `as` to overwrite the semantics of the element.
 
 ```jsx
-
 const Text = cc('p')('font-sans');
 
-const MyComponent = props => (
-  <Text {...props} as={'div'}/>
-)
+const MyComponent = props => <Text {...props} as={'div'} />;
 
 export default MyComponent;
-
 ```
-
 
 ## License
 
