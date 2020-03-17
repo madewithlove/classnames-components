@@ -54,11 +54,11 @@ Props are available by using a function as second param.
 
 ```jsx
 
-const Button = cc('button')(({ type }) => [
+const Button = cc('button')(props => [
   'font-serif',
   {
-    'color-red-500': type === ButtonType.ERROR,
-    'color-gray-500': type === ButtonType.DEFAULT,
+    'color-red-500': props.type === ButtonType.ERROR,
+    'color-gray-500': props.type === ButtonType.DEFAULT,
   }
 ]);
 
