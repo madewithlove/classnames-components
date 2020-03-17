@@ -56,7 +56,6 @@ The props of the component are passed down.
 
 ```jsx
 
-// using arguments
 const Button = cc('button')(props => classnames({
   'color-red-500': props.type === ButtonType.ERROR,
   'color-gray-500': props.type === ButtonType.DEFAULT,
