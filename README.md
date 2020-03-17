@@ -27,10 +27,20 @@ const Intro = cc('p')(['font-serif', 'text-base', 'leading-relaxed']);
 // using a string
 const Wrapper = cc('section')('container mx-auto px-4');
 
+// using classnames -> https://github.com/JedWatson/classnames
+const Button = cc('button')(
+  classnames({
+    'color-gray-500': true,
+    'font-serif': true,
+  })
+);
+
+
 const MyComponent = () => (
   <Wrapper>
     <Header>A title</Header>
     <Intro>A nice intro</Intro>
+    <Button>Ok</Button>
   </Wrapper>
 )
 
@@ -38,38 +48,20 @@ export default MyComponent;
 
 ```
 
-## With props
+## Based on props
 
-You can access the props of the component and use them to apply classes conditionally
+You can also use [classnames](https://github.com/JedWatson/classnames) to conditionally apply classes.
 
-Creating the classname component
+The props of the component are passed down.
 
 ```jsx
 
 // using arguments
-const Button = cc('button')(
-  'font-sans',
-  ({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500'
-);
-
-// using an array
-const Button = cc('button')([
-  'font-sans',
-  ({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500'
-]);
-
-// using template strings
-const Button = cc('button')(`
-  font-sans
-  ${({ type }) => type === ButtonType.ALERT ? 'text-red-500' : 'text-gray-500')}
-`;
-
-
-```
-
-Using it
-
-```jsx
+const Button = cc('button')(props => classnames({
+  'color-red-500': props.type === ButtonType.ERROR,
+  'color-gray-500': props.type === ButtonType.DEFAULT,
+  'font-serif': true,
+}));
 
 const MyComponent = () => (
   <Wrapper>
