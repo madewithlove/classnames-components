@@ -9,6 +9,12 @@ const parseParams = (...params) => props =>
     .map(param => classnames(isFunction(param) ? param(props) : param))
     .join(' ');
 
+// How do we handle the passing down of props on a HTML element? Custom attributes are allowed?
+// https://reactjs.org/docs/dom-elements.html#all-supported-html-attributes
+
+// How do we wrap an existing classname-component?
+// --- also make sure we can use `as` in this situation
+
 const classnamesComponents = element => (...params) => props =>
   React.createElement(element, {
     className: parseParams(props.className, ...params)(props),
