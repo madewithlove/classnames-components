@@ -11,7 +11,7 @@ const parseParams = (...params) => props =>
 
 const classnamesComponents = element => (...params) => props =>
   React.createElement(element, {
-    className: parseParams(...params)(props),
+    className: parseParams(props.className, ...params)(props),
     ...props,
   });
 
