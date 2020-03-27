@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "babel src --out-dir lib --ignore '**/*.test.js'",
+    "format:check": "prettier --check '**/*.{js,jsx,md,css,yml,json}'",
     "prepare": "yarn build"
   },
   "repository": {
