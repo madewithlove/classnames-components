@@ -1,27 +1,29 @@
 import React from 'react';
 import classnames from 'classnames';
 
+import isPropValid from '@emotion/is-prop-valid';
+
 const isFunction = functionToCheck =>
   functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
 
 const parseParams = (...params) => props =>
   params
     .map(param => classnames(isFunction(param) ? param(props) : param))
-    .join(' ');
+    .join(' ')
+    .trim();
 
-// How do we handle the passing down of props on a HTML element? Custom attributes are allowed?
-// https://reactjs.org/docs/dom-elements.html#all-supported-html-attributes
-
-// How do we wrap an existing classname-component?
-// --- also make sure we can use `as` in this situation
+const cleanUpProps = props =>
+  Object.fromEntries(
+    Object.entries(props).filter(([prop]) => isPropValid(prop)),
+  );
 
 const classnamesComponents = element => (...params) => ({
   className = '',
   ...props
 }) =>
-  React.createElement(element, {
+  React.createElement(props.as ?? element, {
     className: parseParams(className, ...params)(props),
-    ...props,
+    ...cleanUpProps(props),
   });
 
 export default classnamesComponents;
