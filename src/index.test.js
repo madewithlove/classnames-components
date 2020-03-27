@@ -50,6 +50,16 @@ test('Wrap an existing component with classnames-components', () => {
 
   const classnameElement = screen.getByText(content);
   expect(classnameElement).toHaveClass('bar test ok', { exact: true });
+  expect(classnameElement).toContainHTML('</div>');
+});
+
+test('Conditionally applies CSS classes when wrapping an existing component', () => {
+  const Wrapper = cc(Simple)('bar');
+  render(<Wrapper isRed={true}>{content}</Wrapper>);
+
+  const classnameElement = screen.getByText(content);
+  expect(classnameElement).toHaveClass('test ok bar red', { exact: true });
+  expect(classnameElement).toContainHTML('</div>');
 });
 
 test('Override the correct HTML element when provided with "as"', () => {

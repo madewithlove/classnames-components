@@ -24,6 +24,7 @@ const classnamesComponents = element => (...params) => ({
   React.createElement(props.as ?? element, {
     className: parseParams(className, ...params)(props),
     ...cleanUpProps(props),
+    ...(isFunction(element) ? props : {}),
   });
 
 export default classnamesComponents;
